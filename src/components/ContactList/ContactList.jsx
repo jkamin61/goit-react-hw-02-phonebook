@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes, { any } from 'prop-types';
 
 function ContactList({ contacts, onDeleteContact }) {
   const handleDeleteContact = id => {
@@ -15,6 +16,11 @@ function ContactList({ contacts, onDeleteContact }) {
       ))}
     </ul>
   );
+}
+
+ContactList.propTypes = {
+  contacts: PropTypes.any,
+  onDeleteContact: any,
 }
 
 export default ContactList;
