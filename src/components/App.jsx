@@ -55,7 +55,7 @@ export class App extends React.Component {
         <h2 className={"heading"}>Contacts</h2>
         <div className={"list"}>
         <Filter filter={this.state.filter} onChange={this.handleFilterChange} />
-          <ContactList contacts={contacts} onDeleteContact={this.handleDeleteContact} />
+          <ContactList contacts={filteredContacts} onDeleteContact={this.handleDeleteContact} />
         </div>
       </div>
     );
